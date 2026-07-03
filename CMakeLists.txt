@@ -7,6 +7,8 @@ find_package(llvm-mos-sdk REQUIRED)
 
 project(LodeRunner C CXX ASM)
 
+add_compile_options(-g -gdwarf-4) # for rp6502-emu source-level debug
+
 add_executable(LodeRunner)
 
 rp6502_asset(LodeRunner help src/help.txt)
